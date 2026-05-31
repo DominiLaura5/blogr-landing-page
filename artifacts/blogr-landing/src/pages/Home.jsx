@@ -4,9 +4,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (name) => {
     setOpenDropdown(openDropdown === name ? null : name);
   };
 
@@ -24,11 +24,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
 
-      {/* ── Navbar ───────────────────────────────────────── */}
+      {/* Navbar */}
       <header className="absolute top-0 w-full z-50 px-5 py-8 sm:px-8 md:px-16 md:py-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-          {/* Logo + desktop nav */}
           <div className="flex items-center gap-10 lg:gap-14">
             <span className="text-2xl sm:text-3xl font-heading font-bold text-white tracking-tighter select-none">
               Blogr
@@ -73,7 +72,6 @@ export default function Home() {
             </nav>
           </div>
 
-          {/* Desktop auth buttons */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <button className="text-white/80 hover:text-white font-medium text-sm transition-colors">
               Login
@@ -83,7 +81,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             className="md:hidden text-white p-1 z-50 relative"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -96,11 +93,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── Mobile Menu ──────────────────────────────────── */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -164,9 +160,8 @@ export default function Home() {
 
       <main className="flex-1">
 
-        {/* ── Hero ─────────────────────────────────────────── */}
+        {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(13,100%,72%)] to-[hsl(353,100%,62%)] rounded-bl-[80px] sm:rounded-bl-[100px] text-center pt-44 pb-28 sm:pt-52 md:pt-64 md:pb-40 px-5 sm:px-8">
-          {/* Background circles */}
           <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/3 opacity-20 pointer-events-none select-none">
             <svg width="700" height="700" viewBox="0 0 700 700" aria-hidden="true">
               <circle cx="350" cy="350" r="280" stroke="white" strokeWidth="70" fill="none" />
@@ -213,7 +208,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Designed for the future ─────────────────────── */}
+        {/* Designed for the future */}
         <section className="py-20 md:py-36 px-5 sm:px-8 md:px-16">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-semibold text-[hsl(208,49%,24%)] text-center mb-12 md:mb-20">
@@ -221,7 +216,6 @@ export default function Home() {
             </h2>
 
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-6">
-              {/* Text */}
               <div className="w-full md:flex-1 flex flex-col gap-10 md:pr-8 order-2 md:order-1">
                 {[
                   {
@@ -255,7 +249,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Illustration */}
               <div className="w-full md:flex-1 flex justify-center order-1 md:order-2">
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
@@ -284,9 +277,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Infrastructure ───────────────────────────────── */}
+        {/* Infrastructure */}
         <section className="relative bg-gradient-to-br from-[hsl(237,17%,21%)] to-[hsl(237,23%,32%)] rounded-bl-[80px] sm:rounded-bl-[100px] rounded-tr-[80px] sm:rounded-tr-[100px] py-20 md:py-32 px-5 sm:px-8 md:px-16 overflow-hidden">
-          {/* Background decoration */}
           <div className="absolute -top-24 -left-24 opacity-20 pointer-events-none select-none" aria-hidden="true">
             <svg width="500" height="500" viewBox="0 0 500 500">
               <circle cx="250" cy="250" r="220" stroke="#94a3b8" strokeWidth="50" fill="none" />
@@ -295,7 +287,6 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-12 relative z-10">
-            {/* Phone illustration */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -321,7 +312,6 @@ export default function Home() {
               </svg>
             </motion.div>
 
-            {/* Text */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -340,10 +330,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Free, open, simple ───────────────────────────── */}
+        {/* Free, open, simple */}
         <section className="py-20 md:py-36 px-5 sm:px-8 md:px-16">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-6">
-            {/* Illustration */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -360,7 +349,6 @@ export default function Home() {
               </svg>
             </motion.div>
 
-            {/* Text */}
             <div className="w-full md:flex-1 flex flex-col gap-10 md:pl-8 order-2 md:order-2">
               {[
                 {
@@ -393,7 +381,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ── Footer ───────────────────────────────────────── */}
+      {/* Footer */}
       <footer className="bg-[hsl(240,10%,16%)] text-[hsl(240,2%,79%)] py-16 sm:py-20 rounded-tr-[80px] sm:rounded-tr-[100px]" aria-label="Site footer">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
