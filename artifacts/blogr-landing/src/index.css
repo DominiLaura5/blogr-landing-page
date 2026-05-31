@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: 'Ubuntu', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --font-heading: 'Overpass', sans-serif;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 208 49% 24%;
+  
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 13 100% 72%;
+  
+  --primary: 353 100% 62%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 237 17% 21%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 207 13% 34%;
+  
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 208 49% 24%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 208 49% 24%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 16%;
+  --foreground: 240 2% 79%;
+  
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 13 100% 72%;
+  
+  --primary: 353 100% 62%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 237 17% 21%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 2% 79%;
+  
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 240 5.9% 10%;
+  
+  --popover: 240 10% 16%;
+  --popover-foreground: 240 2% 79%;
+  
+  --card: 240 10% 16%;
+  --card-foreground: 240 2% 79%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-[hsl(208,49%,24%)];
+  }
+}
