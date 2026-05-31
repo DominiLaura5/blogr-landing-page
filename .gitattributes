@@ -1,0 +1,12 @@
+# Tell GitHub Linguist to only count the blogr-landing source files
+# Everything else in the monorepo is ignored for language statistics
+
+artifacts/api-server/**        linguist-vendored
+artifacts/mockup-sandbox/**    linguist-vendored
+lib/**                         linguist-vendored
+scripts/**                     linguist-vendored
+.local/**                      linguist-vendored
+*.config.js                    linguist-vendored
+*.config.ts                    linguist-vendored
+tsconfig*.json                 linguist-vendored
+pnpm-lock.yaml                 linguist-vendored
