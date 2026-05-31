@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter @workspace/blogr-landing run build",
+  "outputDirectory": "artifacts/blogr-landing/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null
+}
