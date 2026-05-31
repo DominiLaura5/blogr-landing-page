@@ -7,10 +7,6 @@ Built as a Frontend Mentor challenge.
 
 [View Live Site](https://blogr-landing-page-1.vercel.app/)
 
-## Screenshot
-
-![Blogr Landing Page](./screenshot.png)
-
 ## Built With
 
 - HTML5 & CSS
